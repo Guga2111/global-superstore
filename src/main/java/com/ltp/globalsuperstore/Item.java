@@ -2,10 +2,12 @@ package com.ltp.globalsuperstore;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
 public class Item {
     private String category;
+    @NotBlank(message = "Name cannot be blank!")
     private String name;
     private Double price;
     private Double discount;

@@ -16,6 +16,7 @@
                     <option th:each="category : ${categories}" th:value="${category}" th:text="${category}"></option>
 
                 </select>
+                <p style="color:red" th:errors="*{name}"></p>
                 <input type="text" placeholder="Name" th:field="*{name}">
                 <input class="half" type="text" placeholder="Price" th:field="*{price}">
                 <input class="half" type="text" placeholder="Discount" th:field="*{discount}">
